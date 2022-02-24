@@ -3,36 +3,61 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
-  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
 
-   <dependencies>
-          <dependency>
-              <groupId>org.flywaydb</groupId>
-              <artifactId>flyway-core</artifactId>
-              <version>8.5.0</version>
-          </dependency>
-          <dependency>
-              <groupId>mysql</groupId>
-              <artifactId>mysql-connector-java</artifactId>
-              <version>8.0.28</version>
-              <scope>compile</scope>
-          </dependency>
+  
+  <properties>
+        <flyway.version>8.2.0</flyway.version>
+        <mysql.driver.version>8.0.16</mysql.driver.version>
+        <database.driver>com.mysql.jdbc.Driver</database.driver>
+        <database.url>jdbc:mysql://3.22.94.249:3306/db1?autoreconnect=true</database.url>
+        <database.username>sreejith</database.username>
+        <database.password>@Admin123</database.password>
+  </properties>
+  
+  
+ <dependencies>
+     <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
+        <version>${flyway.version}</version>
+     </dependency>
+     <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.driver.version}</version>
+        <scope>runtime</scope>
+     </dependency>
    </dependencies>
+  
+  
+  
   <build>
     <plugins>
         <plugin>
           <groupId>org.flywaydb</groupId>
           <artifactId>flyway-maven-plugin</artifactId>
-          <version>8.5.1</version>
+          <version>${flyway.version}</version>
           <configuration>
-            <driver>com.mysql.jdbc.Driver</driver>
-            <url>jdbc:mysql://3.22.94.249:3306/db1</url>
-            <user>sreejith</user>
-            <password>@Admin123</password>
+            <driver>${database.driver}</driver>
+            <url>${database.url}</url>
+            <user>${database.username}</user>
+            <password>${database.password}</password>
           </configuration>
+          <executions>
+             <execution>
+                <id>flyway database migration</id>
+                <phase>pre-integration-test</phase>
+                   <goals>
+                      <goal>clean</goal>
+                      <goal>baseline</goal>
+                      <goal>migrate</goal>
+                      <goal>info</goal>
+                   </goals>
+             </execution>
+          </executions>
         </plugin>
       </plugins>
   </build>
