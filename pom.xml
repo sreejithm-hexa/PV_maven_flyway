@@ -18,8 +18,8 @@
             <changeLogFile>src/main/resources/db/migration/changelog.xml</changeLogFile> 
             <driver>com.mysql.cj.jdbc.Driver</driver>
             <url>jdbc:mysql://3.22.94.249:3306/db2</url> 
-            <username>sreejith</username>
-            <password>@Admin123</password>
+            <username>${user}</username>
+            <password>${pass}</password>
           </configuration>
           <dependencies>
             <dependency>
