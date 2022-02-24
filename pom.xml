@@ -12,7 +12,7 @@
         <flyway.version>8.2.0</flyway.version>
         <mysql.driver.version>8.0.16</mysql.driver.version>
         <database.driver>com.mysql.jdbc.Driver</database.driver>
-        <database.url>jdbc:mysql://3.22.94.249:3306/db1?autoreconnect=true</database.url>
+        <database.url>jdbc:mysql://3.22.94.249:3306/db1</database.url>
   </properties>
   
   
@@ -41,7 +41,7 @@
           <configuration>
             <driver>${database.driver}</driver>
             <url>${database.url}</url>
-            <user>${uername}</user>
+            <user>${username}</user>
             <password>${pass}</password>
           </configuration>
           <executions>
