@@ -13,8 +13,6 @@
         <mysql.driver.version>8.0.16</mysql.driver.version>
         <database.driver>com.mysql.jdbc.Driver</database.driver>
         <database.url>jdbc:mysql://3.22.94.249:3306/db1?autoreconnect=true</database.url>
-        <database.username>${username}</database.username>
-        <database.password>${pass}</database.password>
   </properties>
   
   
@@ -43,8 +41,8 @@
           <configuration>
             <driver>${database.driver}</driver>
             <url>${database.url}</url>
-            <user>${database.username}</user>
-            <password>${database.password}</password>
+            <user>${uername}</user>
+            <password>${pass}</password>
           </configuration>
           <executions>
              <execution>
