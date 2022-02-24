@@ -15,7 +15,7 @@
           <artifactId>flyway-maven-plugin</artifactId>
           <version>8.5.0</version>
           <configuration>
-            <driver>com.mysql.jdbc.driver</driver>
+            <driver>com.mysql.jdbc.Driver</driver>
             <url>jdbc:mysql://3.22.94.249:3306/db1?autoreconnect=true</url>
             <user>sreejith</user>
             <password>@Admin123</password>
