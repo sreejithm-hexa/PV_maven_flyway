@@ -17,7 +17,7 @@
           <configuration>
             <url>jdbc:mysql://3.22.94.249:3306/db1</url>
             <user>sreejith</user>
-            <password>@Admin123</password?>
+            <password>@Admin123</password>
           </configuration>
           <dependencies>
             <dependency>
