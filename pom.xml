@@ -16,7 +16,7 @@
           <version>8.5.0</version>
           <configuration>
             <driver>com.mysql.jdbc.driver</driver>
-            <url>jdbc:mysql://3.22.94.249:3306/db1</url>
+            <url>jdbc:mysql://3.22.94.249:3306/db1?autoreconnect=true</url>
             <user>sreejith</user>
             <password>@Admin123</password>
           </configuration>
@@ -25,13 +25,14 @@
   </build>
   <dependencies>
             <dependency>
+              <groupId>org.flywaydb</groupId>
+              <artifactId>flyway-core</artifactId>
+              <version>8.5.0</version>
+            </dependency>
+            <dependency>
               <groupId>mysql</groupId>
               <artifactId>mysql-connector-java</artifactId>
               <version>8.0.12</version>
-            </dependency>
-            <dependency>
-              <groupId>org.flywaydb</groupId>
-              <artifactId>flyway-mysql</artifactId>
             </dependency>
           </dependencies>
 </project>
