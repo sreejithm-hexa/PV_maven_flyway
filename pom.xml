@@ -16,7 +16,7 @@
           <version>8.5.0</version>
           <configuration>
             <driver>com.mysql.jdbc.Driver</driver>
-            <url>jdbc:mysql://3.22.94.249:3306/db1?autoreconnect=true</url>
+            <url>jdbc:mysql://3.22.94.249:3306/db1</url>
             <user>sreejith</user>
             <password>@Admin123</password>
           </configuration>
@@ -33,6 +33,7 @@
               <groupId>mysql</groupId>
               <artifactId>mysql-connector-java</artifactId>
               <version>8.0.12</version>
+              <scope>runtime</scope>
             </dependency>
           </dependencies>
 </project>
