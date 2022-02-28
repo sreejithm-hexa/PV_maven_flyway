@@ -44,18 +44,6 @@
             <user>${username}</user>
             <password>${pass}</password>
           </configuration>
-          <executions>
-             <execution>
-                <id>flyway database migration</id>
-                <phase>pre-integration-test</phase>
-                   <goals>
-                      <goal>clean</goal>
-                      <goal>baseline</goal>
-                      <goal>migrate</goal>
-                      <goal>info</goal>
-                   </goals>
-             </execution>
-          </executions>
         </plugin>
       </plugins>
   </build>
